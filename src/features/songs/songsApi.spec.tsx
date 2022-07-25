@@ -1,15 +1,15 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
-import App from "./App";
+import { store } from "../../app/store";
+import SongsAPI from "./SongsApi";
 
-test("renders  search", () => {
+test("renders learn react link", () => {
   const { getByText } = render(
     <Provider store={store}>
-      <App />
+      <SongsAPI />
     </Provider>
   );
 
-  expect(getByText(/SEARCH/i)).toBeInTheDocument();
+  expect(getByText(/Artist/i)).toBeInTheDocument();
 });
